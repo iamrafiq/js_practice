@@ -26,6 +26,8 @@ import { flyWeightPattern } from "./design_pattern/behavioural/flyweight_pattern
 import { strategyPattern } from "./design_pattern/behavioural/strategy_pattern/Strategypattern";
 import { observerPattern } from "./design_pattern/behavioural/observer_pattern/ObserverPattern";
 import { chainOfResponsibilityPattern } from "./design_pattern/behavioural/chain_of_responsibility_pattern/main";
+import Person from "./object_prototypes/function_constructor";
+import FunctionAsArgument from "./functions/FunctionAsArgument";
 //import {anonymousFunction} from "./functions/anonymousfunction"
 //import { callBackExample } from "./functions/callback";
 //import { reduceFunctionExamples } from "./functions/higher_order_function/array_reduce";
@@ -33,10 +35,12 @@ import { chainOfResponsibilityPattern } from "./design_pattern/behavioural/chain
 //import userFactory from "./design_pattern/creational/factory_pattern/userFactory"
 //import { singleTonPattern } from "./design_pattern/creational/singleton_pattern";
 //chainOfResponsibilityPattern.execute();
-var testVar = 6;
-console.log(testVar);
-testVar = "ijk9393";
-console.log(testVar);
+
+console.log(FunctionAsArgument.ages);
+console.log(FunctionAsArgument.fullAgeList);
+
+/*const person1 = new Person("jon", 67);
+console.log(person1);*/
 //observerPattern.execute();
 //strategyPattern.execute();
 //flyWeightPattern();
