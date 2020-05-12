@@ -1,7 +1,6 @@
 {
-  "name": "js_design_pattern",
+  "name": "js_practice",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "module": "main.js",
   "dependencies": {
@@ -11,6 +10,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Md. Rafiqul Islam",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linuxrafiq/js_practice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/linuxrafiq/js_practice/issues"
+  },
+  "homepage": "https://github.com/linuxrafiq/js_practice#readme",
+  "description": "javascript practice "
 }

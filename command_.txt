@@ -1,0 +1,6 @@
+//to run the app 
+node -r esm app.js
+//to install esm
+npm install esm
+
+// 

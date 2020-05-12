@@ -28,6 +28,12 @@ import { observerPattern } from "./design_pattern/behavioural/observer_pattern/O
 import { chainOfResponsibilityPattern } from "./design_pattern/behavioural/chain_of_responsibility_pattern/main";
 import Person from "./object_prototypes/function_constructor";
 import FunctionAsArgument from "./functions/FunctionAsArgument";
+import FunctionReturningFunciton from "./functions/FunctionReturningFunction";
+import ClouserExample from "./functions/closure";
+import CallFunctionExample from "./functions/bind_call_apply/CallFunctionExample";
+import ApplyFunctionExample from "./functions/bind_call_apply/ApplyFunctionExample";
+import BindFunctionExample from "./functions/bind_call_apply/BindFunctionExample";
+
 //import {anonymousFunction} from "./functions/anonymousfunction"
 //import { callBackExample } from "./functions/callback";
 //import { reduceFunctionExamples } from "./functions/higher_order_function/array_reduce";
@@ -35,9 +41,18 @@ import FunctionAsArgument from "./functions/FunctionAsArgument";
 //import userFactory from "./design_pattern/creational/factory_pattern/userFactory"
 //import { singleTonPattern } from "./design_pattern/creational/singleton_pattern";
 //chainOfResponsibilityPattern.execute();
+BindFunctionExample.execute();
+//ApplyFunctionExample.execute();
+//CallFunctionExample.execute();
+//ClouserExample.execute();
+/*var funQuestion = FunctionReturningFunciton.interviewQuestion(`teacher`);
+funQuestion(`suru`);
+//or
+FunctionReturningFunciton.interviewQuestion(`programmer`)(`nora`);*/
 
-console.log(FunctionAsArgument.ages);
-console.log(FunctionAsArgument.fullAgeList);
+
+/*console.log(FunctionAsArgument.ages);
+console.log(FunctionAsArgument.fullAgeList);*/
 
 /*const person1 = new Person("jon", 67);
 console.log(person1);*/
