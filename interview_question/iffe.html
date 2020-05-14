@@ -1,0 +1,44 @@
+<!--Question what is IIFE, the reasons it used for-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = 'demo'></div>
+    <script>
+        (function(){
+            const document = "hi there";
+            this.document.getElementById("demo").innerHTML = "Hello JavaScript!";
+            //console.log(document);
+
+        })();
+       // document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        var calculator = {
+            add:function(a,b){
+                return a+b;
+            },
+            mul:function(a,b){
+                return a*b;
+            }
+        }
+        var cal = (function(){
+            var calculator = {
+                sub:function(a,b){
+                    return a-b;
+                },
+                div:function(a,b){
+                    return a/b;
+                }
+            }
+            console.log(this.calculator.mul(5,10));
+            console.log(calculator.sub(10,5));
+            return calculator;
+        })();
+        console.log(calculator.add(5,10));
+        console.log(cal.div(10,5));
+    </script> 
+</body>
+</html>
