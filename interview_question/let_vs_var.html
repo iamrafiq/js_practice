@@ -38,7 +38,23 @@
 
         }
     }
+    function createButtons3(){
+        for(var i = 11; i <=15; i++){
+            var body = document.getElementsByTagName('p')[0];
+            var button = document.createElement('BUTTON');
+            button.innerHTML = "Button "+i;
+            (function(value){ // in each itaration creating a new instance of iife, which is preserving the value of i inside it's own context
+                button.onclick = function(){
+                alert('This is button'+value);
+            }            
+            })(i);
+            body.appendChild(button);
+
+
+        }
+    }
     createButtons();
     createButtons2();
+    createButtons3();
 </script>
 </html>
