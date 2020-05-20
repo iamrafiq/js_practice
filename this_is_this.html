@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            width: 600;
+            height: 500;
+        }
+    </style>
+</head>
+<body>
+    <script>/*
+        console.log('What is this: '+this);
+            console.log(this);
+        function myFunc(){
+            console.log('What is this: '+this);
+            console.log(this);
+        }
+        myFunc();*/
+    </script>
+    <script>/*
+        var firstName = "Nora";
+        var lastName = "Zaman";
+        var myObj = {
+            firstName:"Lord",
+            lastName:'Baron',
+            printNameGetContext:function(){
+                console.log(firstName + " "+lastName);
+                console.log(this.firstName +" "+this.lastName);
+                return this;
+            }
+        }
+
+      var context = myObj.printNameGetContext(this);
+      console.log(context);*/
+    </script>
+    <button class="btn">Click Me</button>
+    <script>/*
+        function printMe(){
+            console.log(this);
+        }
+        document.querySelector('.btn').addEventListener('click', function(){
+            console.log(this);
+            printMe();
+        })*/
+    </script>
+    <script>
+        var myObj = {
+            firstName:"Lord",
+            lastName:'Baron',
+            printName:function(callback1, callback2){
+                //Attaching callback1 with this myObj context
+                this.callback1 = callback1;
+                this.callback1(this.firstName +" "+this.lastName)
+                //We did not attached callback2 with myObj so, it's reamin with window context by default
+                callback2();
+                /*
+                 //test bellow codes
+                 this.callback2 = callback2;
+                 this.callback2();
+                */
+            }
+        }
+        var callback2 = function (){
+            console.log(this);
+        }
+        myObj.printName(function(data){
+            console.log(data);
+            console.log(this);
+        }, callback2);
+    </script>
+</body>
+</html>
