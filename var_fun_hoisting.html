@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var totalAmo;
+        var getSum;
+
+        console.log(totalAmo);
+        //console.log(getSum(8,9));
+        var totalAmo = 8;
+        var getSum = function(a, b){
+            return a+b;
+        }
+        console.log(totalAmo);
+        console.log(getSum(9,7));
+
+        function functionScope(){
+            var totalAmo;
+            var getSum;
+
+            console.log(totalAmo);
+            console.log(getSum(8,9));
+            var totalAmo = 8;
+            var getSum = function(a, b){
+                return a+b;
+            }
+        }
+
+        function getTotal(){
+            let total;
+            var multiplier;
+            total = 0;
+            for(var i = 0; i<10; i++){
+                let valueToAdd;
+                valueToAdd = i;
+                multiplier = 2;
+                total += valueToAdd*multiplier;
+            }
+            return total;
+        }
+
+        console.log(getTotal());
+    </script>
+</body>
+</html>

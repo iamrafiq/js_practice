@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            width: 100;
+            height: 50;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Click Me</button>
+    <script>
+       var g = "global";
+       var obj = {
+           a:"abc",
+           fun:function(){
+               console.log(this.a);
+               console.log(this);
+           }
+       }
+       function a(callback){
+           console.log(g);
+           console.log(this.g);
+           var _a = 'a';
+           function b(callback){
+            var _b="b";
+            console.log(_a);
+            console.log(this.g);
+            console.log(g);
+           }
+           b(callback);
+       }
+       a(obj.fun);
+      
+       obj.fun();
+       console.log(obj.toString());
+       console.log(this.toString());
+       console.log(obj.fun);
+       console.log('................');
+       function ABC(a, b){
+           this.a = a;
+           this.b = b;
+           console.log(this);
+           console.log(this.g);
+           this.mul = function(callback){
+               console.log(this);
+               this.callback = callback;
+               this.callback(this.a*this.b);
+           }
+       }
+       ABC(5,10);
+       var abc = new ABC(6,8);
+       console.log('................');
+       document.querySelector('.btn').addEventListener('click', function(){
+           console.log(this);
+       });
+
+       abc.mul(function(value){
+        console.log('callback: '+value);
+        console.log(this)
+       });
+    </script>
+</body>
+</html>
+
