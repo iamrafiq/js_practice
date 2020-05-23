@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       var color = 'red';
+       var obj = {
+           color:'blue',
+           printColor: function(){
+               var self = this;
+               console.log('In printColor -- this.color: '+this.color);
+               console.log('In printColor -- self.color: '+self.color);
+               (function(){
+                    console.log(this)
+                    console.log('In IIFE -- this.color: '+this.color);
+                    console.log('In IIFE -- self.color: '+self.color); 
+               })();
+               function nestedFunc(){
+                    console.log('nested fun -- this.color: '+this.color);
+                    console.log('nested fun -- self.color: '+self.color);
+               }
+               nestedFunc();
+               return nestedFunc;
+           }
+       };
+       obj.printColor()();
+   </script> 
+</body>
+</html>
